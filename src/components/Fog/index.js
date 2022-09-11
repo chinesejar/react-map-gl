@@ -66,7 +66,7 @@ class Fog extends PureComponent<Props> {
   }
 
   componentWillUnmount() {
-    if (!this._map || !this._map.getStyle() || !this._map?.setFog) {
+    if (!this._map || !this._map.getStyle() || !this._map.setFog) {
       return;
     }
 
@@ -77,7 +77,7 @@ class Fog extends PureComponent<Props> {
     /**
      * Fog since version 2.3.0, not support below versions.
      */
-    if (!this._map?.setFog) return;
+    if (!this._map.setFog) return;
     const {
       color,
       'high-color': highColor,

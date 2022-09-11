@@ -30,3 +30,13 @@ test('update', () => {
     ]
   });
 });
+
+test('throws', () => {
+  console.error = jest.fn();
+
+  expect(() =>
+    mount(<Fog range={[0.5, 5]} color='#ffff00' />)
+  ).toThrow();
+
+  expect(console.error).toHaveBeenCalled();
+});
